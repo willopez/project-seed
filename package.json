@@ -1,0 +1,65 @@
+{
+  "name": "static-project-seed",
+  "version": "0.0.1",
+  "description": "A basic static project starter",
+  "author": "Will Lopez <will@noomadigital.com>",
+  "license": "MIT",
+  "repository": "https://github.com/willopez/static-project-seed.git",
+  "main": "index.js",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-wrap-in-js": "^1.1.1",
+    "bootstrap": "^4.0.0-beta",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.4",
+    "isomorphic-fetch": "^2.2.1",
+    "next": "^3.2.2",
+    "node-sass": "^4.5.3",
+    "popper.js": "^1.12.3",
+    "postcss-loader": "^2.0.6",
+    "prop-types": "^15.6.0",
+    "raw-loader": "^0.5.1",
+    "react": "^15.5.4",
+    "react-addons-css-transition-group": "^15.5.2",
+    "react-addons-transition-group": "^15.5.2",
+    "react-dom": "^15.5.4",
+    "reactstrap": "^4.8.0",
+    "sass-loader": "^6.0.6",
+    "unfetch": "https://registry.npmjs.org/unfetch/-/unfetch-3.0.0.tgz"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.4",
+    "babel-eslint": "^8.0.0",
+    "eslint": "^4.7.2",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-config-prettier": "^2.6.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-prettier": "^2.3.1",
+    "eslint-plugin-react": "^7.3.0",
+    "gulp": "^3.9.1",
+    "gulp-csso": "^3.0.0",
+    "gulp-sass": "^3.1.0",
+    "postcss-cli": "^4.1.1",
+    "postcss-easy-import": "^3.0.0",
+    "postcss-flexbugs-fixes": "^3.2.0",
+    "prettier": "^1.7.0"
+  },
+  "optionalDependencies": {
+    "fsevents": "*"
+  },
+  "scripts": {
+    "test": "",
+    "gulp": "./node_modules/gulp/bin/gulp.js",
+    "postcss": "postcss --config postcss.config.js --replace static/css/app.css",
+    "css:dev": "node-sass --output-style expanded --precision 6 styles/app.scss static/css/app.css && npm run postcss",
+    "css:prod": "npm run gulp && npm run postcss",
+    "start": "npm run css:dev && NODE_ENV=development PORT=3000 nodemon -w index.js",
+    "build": "next build",
+    "production": "npm run css:prod && npm run build && node index.js"
+  },
+  "engines": {
+    "node": "7.x.x"
+  }
+}
