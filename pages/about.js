@@ -14,7 +14,7 @@ export default class About extends Component {
   }
 
   static propTypes = {
-    tittle: PropTypes.string.isRequired
+    title: PropTypes.string.isRequired
   };
 
   render() {

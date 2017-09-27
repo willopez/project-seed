@@ -29,7 +29,7 @@ export default class Menu extends Component {
         style={{ marginBottom: 10 }}
       >
         <Link prefetch href="/">
-          <NavbarBrand href="/">Static Project Seed</NavbarBrand>
+          <NavbarBrand href="/">Project Seed</NavbarBrand>
         </Link>
         <NavbarToggler right onClick={this.toggleNavbar} />
         <Collapse isOpen={this.state.isOpen} navbar>

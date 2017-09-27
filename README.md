@@ -1,4 +1,4 @@
-# Next.js 3.0 Static Project Seed
+# Next.js 3.0 Project Seed
 
 This is a Next.js 3.0 project that uses [Reactstrap](https://reactstrap.github.io/) components.
 
@@ -7,7 +7,7 @@ This is a Next.js 3.0 project that uses [Reactstrap](https://reactstrap.github.i
 To get started in development mode, just clone the repository and run:
 
     npm install
-    npm run dev
+    npm run start
 
 ## Building and deploying in production
 
