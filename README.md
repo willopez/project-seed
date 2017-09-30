@@ -1,6 +1,6 @@
-# Next.js 3.0 Project Seed
+# Next.js 4.0 Project Seed
 
-This is a Next.js 3.0 project that uses [Reactstrap](https://reactstrap.github.io/) components.
+This is a Next.js 4.0 project that uses [Reactstrap](https://reactstrap.github.io/) components.
 
 ## Running locally in development mode
 
