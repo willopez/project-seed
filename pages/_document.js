@@ -41,7 +41,7 @@ export default class extends Document {
           <script src="https://cdn.polyfill.io/v2/polyfill.min.js" />
         </Head>
         <body {...this.helmetBodyAttrComponents}>
-          <Main />
+          <Main className="site-wrapper" />
           <NextScript />
         </body>
       </html>

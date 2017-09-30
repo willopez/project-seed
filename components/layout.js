@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Head from 'next/head';
-import { Container } from 'reactstrap';
-import Menu from './Menu';
+import Header from './Header';
 
 const Layout = props => (
-  <div>
-    <Menu />
-    <Container>{props.children}</Container>
+  <div className="cover-container">
+    <Header />
+    <main role="main" className="inner cover">
+      {props.children}
+    </main>
   </div>
 );
 

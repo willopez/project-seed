@@ -1,14 +1,7 @@
 import React, { Component } from 'react';
 import Link from 'next/link';
-import {
-  Nav,
-  NavItem,
-  NavLink,
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand
-} from 'reactstrap';
+import { Nav, Collapse, Navbar, NavbarToggler, NavbarBrand } from 'reactstrap';
+import MenuLink from '../MenuLink';
 
 export default class Menu extends Component {
   state = {
@@ -23,31 +16,28 @@ export default class Menu extends Component {
 
   render() {
     return (
-      <Navbar
-        toggleable
-        className="navbar navbar-dark bg-dark navbar-expand-md sticky-top "
-        style={{ marginBottom: 10 }}
-      >
+      <Navbar toggleable className="navbar navbar-dark navbar-expand-md">
         <Link prefetch href="/">
-          <NavbarBrand href="/">Project Seed</NavbarBrand>
+          <NavbarBrand className="masthead-brand" href="/">
+            Project
+          </NavbarBrand>
         </Link>
         <NavbarToggler right onClick={this.toggleNavbar} />
-        <Collapse isOpen={this.state.isOpen} navbar>
-          <Nav navbar>
-            <NavItem>
-              <Link prefetch href="/">
-                <NavLink className="text-light" href="/">
-                  Home
-                </NavLink>
-              </Link>
-            </NavItem>
-            <NavItem>
-              <Link prefetch href="/about">
-                <NavLink className="text-light" href="#">
-                  About
-                </NavLink>
-              </Link>
-            </NavItem>
+        <Collapse
+          className="justify-content-end"
+          isOpen={this.state.isOpen}
+          navbar
+        >
+          <Nav navbar className="nav-masthead">
+            <Link prefetch href="/" passHref>
+              <MenuLink>HOME</MenuLink>
+            </Link>
+            <Link prefetch href="/about" passHref>
+              <MenuLink>ABOUT</MenuLink>
+            </Link>
+            <Link prefetch href="/contact" passHref>
+              <MenuLink>CONTACT</MenuLink>
+            </Link>
           </Nav>
         </Collapse>
       </Navbar>
