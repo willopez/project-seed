@@ -7,7 +7,7 @@ This is a Next.js 3.0 project that uses [Reactstrap](https://reactstrap.github.i
 To get started in development mode, just clone the repository and run:
 
     npm install
-    npm run start
+    npm start
 
 ## Building and deploying in production
 
