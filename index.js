@@ -10,10 +10,10 @@ process.on('unhandledRejection', (reason, p) => {
   console.log('Unhandled Rejection: Promise:', p, 'Reason:', reason);
 });
 
-// Default when run with `npm start` is 'production' and default port is '80'
+// Default when run with `npm start` is 'production' and default port is '4000'
 // `npm run dev` defaults mode to 'development' & port to '3000'
 process.env.NODE_ENV = process.env.NODE_ENV || 'production';
-process.env.PORT = process.env.PORT || 80;
+process.env.PORT = process.env.PORT || 4000;
 
 const app = next({
   dir: '.',
